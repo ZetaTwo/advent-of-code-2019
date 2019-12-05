@@ -7,7 +7,7 @@ fn main() {
     let line1 = stdin.lock().lines().next().unwrap().unwrap();
 
     let numbers: Result<Vec<_>, _> = line1.split(',').map(|x| x.parse::<u32>()).collect();
-    println!("Hello day02a");
-    println!("{}", day02::day2_func());
+    println!("Hello day04a");
+    println!("{}", day04::day2_func());
     println!("{}", maths::add(1, 4));
 }

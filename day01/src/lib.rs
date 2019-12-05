@@ -43,7 +43,7 @@ mod tests {
 
     #[test]
     fn test_day01a() {
-        let file = File::open("data/1.in").expect("Failed to open test data");
+        let file = File::open("../input/1.in").expect("Failed to open test data");
         let reader = BufReader::new(file);
 
         let total_weight: u32 = reader
@@ -59,7 +59,7 @@ mod tests {
 
     #[test]
     fn test_day01b() {
-        let file = File::open("data/1.in").expect("Failed to open test data");
+        let file = File::open("../input/1.in").expect("Failed to open test data");
         let reader = BufReader::new(file);
 
         let total_weight: u32 = reader
