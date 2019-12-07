@@ -1,13 +1,13 @@
-use std::io;
-use std::io::prelude::*;
-use utils::maths;
-
 fn main() {
-    let stdin = io::stdin();
-    let line1 = stdin.lock().lines().next().unwrap().unwrap();
+    /*let input = utils::get_integer_csv::<u32>();
 
-    let numbers: Result<Vec<_>, _> = line1.split(',').map(|x| x.parse::<u32>()).collect();
-    println!("Hello day02a");
-    println!("{}", day02::day2_func());
-    println!("{}", maths::add(1, 4));
+    match input {
+        Err(e) => println!("Failed reading input: {:?}", e),
+        Ok(values) => {
+            println!("Values: {:?}", values);
+            //let total_weight: u32 = values.into_iter().map(day01::module_fuel_req).sum();
+            //println!("Total weight: {}", total_weight);
+        }
+    }
+    */
 }

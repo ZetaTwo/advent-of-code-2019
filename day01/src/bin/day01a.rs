@@ -1,16 +1,13 @@
-use std::io;
-use std::io::prelude::*;
+use utils;
 
 fn main() {
-    let stdin = io::stdin();
+    let input = utils::get_integer_lines::<u32>();
 
-    let total_weight: u32 = stdin
-        .lock()
-        .lines()
-        .filter_map(Result::ok)
-        .map(|line| line.parse::<u32>())
-        .filter_map(Result::ok)
-        .map(day01::module_fuel_req)
-        .sum();
-    println!("Total weight: {}", total_weight);
+    match input {
+        Err(e) => println!("Failed reading input: {:?}", e),
+        Ok(values) => {
+            let total_weight: u32 = values.into_iter().map(day01::module_fuel_req).sum();
+            println!("Total weight: {}", total_weight);
+        }
+    }
 }

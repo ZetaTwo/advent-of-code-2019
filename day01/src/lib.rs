@@ -9,7 +9,7 @@ pub fn module_fuel_req(weight: u32) -> u32 {
 
 pub fn module_total_fuel_req(part_weight: u32) -> u32 {
     let fuel_parts = std::iter::successors(Some(part_weight), |weight| {
-        if *weight > 0 {
+        if weight > &0 {
             Some(module_fuel_req(*weight))
         } else {
             None
