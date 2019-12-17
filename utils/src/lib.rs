@@ -45,12 +45,12 @@ where
         .lock()
         .lines()
         .map(|line| -> Result<std::str::Split<_>, InputError> { Ok(line?.split(',')) })
-        .map(|split| -> Result<_, InputError> { 
+        .map(|split| -> Result<_, InputError> {
             Ok(split?.map(|s| -> Result<_, InputError> { Ok(s.parse::<T>()?) } ).and_then(|s| s.collect())
         )})
         //.map(|split| -> Result<_, InputError> { Ok(split?.collect())})
         //.map(|split: Result<, InputError>| -> Result<T, InputError> { Ok(split?.collect())})
         .collect()
-        
+
 }
 */
